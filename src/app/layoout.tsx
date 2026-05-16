@@ -1,24 +1,8 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css"; 
-
-const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "Mkamba Tech School Management Dashboard",
-  description: "Next.js School Management System developed by Mkamba Tech",
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  // This file MUST exist, but it doesn't need any styling.
   return (
     <html lang="en">
-      <body className={inter.className}> 
-        {children}
-        </body>
+      <body>{children}</body>
     </html>
-  );
+  )
 }
